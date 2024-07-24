@@ -1,12 +1,12 @@
-from src.astro_geo_info import astro_geo_info
+from src.astro_info import astro_info
+from src.geo_info import geo_info
 import webbrowser
+import json
 
 # Fetch the number of astronauts
 url = "http://api.open-notify.org/astros.json"
-result = astro_geo_info(url)
 
-# Print detailed info
-print(result)
-
+geo_info()
+astro_info(url)
 
 webbrowser.open("src/iss.txt")
